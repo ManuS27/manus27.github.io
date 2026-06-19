@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Links</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --text-color: #c9d1d9;
+            --btn-bg: #21262d;
+            --btn-hover: #30363d;
+            --btn-text: #58a6ff;
+            --border-color: #30363d;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .container {
+            width: 100%;
+            max-width: 480px;
+            text-align: center;
+        }
+        .profile-img {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            border: 2px solid var(--border-color);
+            margin-bottom: 16px;
+        }
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+        p {
+            font-size: 1rem;
+            color: #8b949e;
+            margin-bottom: 32px;
+        }
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .link-btn {
+            background-color: var(--btn-bg);
+            color: var(--btn-text);
+            border: 1px solid var(--border-color);
+            padding: 14px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+        .link-btn:hover {
+            background-color: var(--btn-hover);
+            border-color: #8b949e;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img class="profile-img" src="https://github.com/yourusername.png" alt="Profile Picture">
+        
+        <h1>Your Name</h1>
+        <p>Product Manager & Developer | Building things with AI</p>
+
+        <div class="links-container">
+            <a href="https://github.com/yourusername" class="link-btn" target="_blank">GitHub Profile</a>
+            <a href="https://linkedin.com/in/yourusername" class="link-btn" target="_blank">LinkedIn</a>
+            <a href="https://yourportfolio.com" class="link-btn" target="_blank">Personal Portfolio</a>
+            <a href="mailto:youremail@example.com" class="link-btn">Contact Me</a>
+        </div>
+    </div>
+
+</body>
+</html>
+    
