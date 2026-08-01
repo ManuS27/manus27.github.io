@@ -593,4 +593,52 @@
                         </div>
                         <p class="node-desc">
                             Core focus in Data Structures, Algorithms, Cryptography (Published research on SHA-256 algorithm optimization), and Software Engineering.
-                        </
+                        </p>
+                    </div>
+
+                    <div class="timeline-node">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-badge">
+                            <i data-lucide="briefcase" style="width:12px;height:12px;"></i> JUN 2018 – AUG 2018
+                        </div>
+                        <div class="node-header">
+                            <span class="node-role">Project Manager & Strategist</span>
+                            <span class="node-org">Kyrion Technologies</span>
+                        </div>
+                        <p class="node-desc">
+                            Designed optimal resourcing schedules and examination operations by leveraging Linear Programming (LP) modeling and advanced decision trees.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div style="margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--border); display: grid; grid-template-columns: 1fr; gap: 16px;">
+                    <div>
+                        <h4 style="font-size: 0.95rem; color: var(--accent-cyan); margin-bottom: 6px; display: flex; align-items: center; gap: 6px;">
+                            <i data-lucide="award" style="width:16px;height:16px;"></i> Recognition & Community
+                        </h4>
+                        <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5;">
+                            • <strong>FIFA World Cup 2026 Ambassador:</strong> Accepted Volunteer for NY/NJ Host Committee Operations.<br>
+                            • <strong>EY Extra Miler & SPOT Award (5x)</strong> | EY Exceptional Client Service Award.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+            event.currentTarget.classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
