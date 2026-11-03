@@ -79,12 +79,12 @@ section.block>.intro{color:var(--muted);max-width:46em;margin:0 0 20px}
 .tag{font-size:12px;font-weight:700;letter-spacing:.04em;border-radius:6px;padding:3px 8px;background:var(--surface2);color:var(--teal);border:1px solid var(--line)}
 .outcome{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:17px;color:var(--text);margin:0 0 6px}
 /* routing diagram */
-.route{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:stretch}
-.route .who{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
-.route .who h3{margin:0 0 4px;font-size:16px}
-.route .who p{margin:0;color:var(--muted);font-size:14px}
-.route .arrow{display:flex;align-items:center;justify-content:center;font-size:22px;color:var(--gold);font-weight:800}
-.route-stack{display:grid;gap:12px}
+.route-list{display:grid;gap:14px}
+.route-pair{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:stretch}
+.route-pair .who{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px;height:100%}
+.route-pair .who h3{margin:0 0 4px;font-size:16px}
+.route-pair .who p{margin:0;color:var(--muted);font-size:14px}
+.route-stack{display:grid;gap:14px;align-content:start}
 /* recognition */
 .recog{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .recog .card{border-left:4px solid var(--gold)}
@@ -146,8 +146,7 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--faint);f
   .grid3,.grid2,.recog,.facts{grid-template-columns:1fr}
   .hero{grid-template-columns:88px 1fr;gap:16px}
   .avatar{width:88px;height:88px}
-  .route{grid-template-columns:1fr}
-  .route .arrow{transform:rotate(90deg);padding:2px 0}
+  .route-pair{grid-template-columns:1fr}
   .bar-row{grid-template-columns:110px 1fr 52px}
 }
 @media (max-width:560px){
@@ -203,21 +202,22 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--faint);f
   <section class="block">
     <h2>Start where you are</h2>
     <p class="intro">Pick the page that fits why you are here.</p>
-    <div class="route">
-      <div class="route-stack">
-        <div class="who"><h3>Hiring manager / product leader</h3><p>You need the decision: problem, constraint, options rejected, trade-off, outcome.</p></div>
-        <div class="who"><h3>Engineer / technical peer</h3><p>You need architecture, evaluation design, and what broke, not business headlines.</p></div>
+    <div class="route-list">
+      <div class="route-pair">
+        <div class="route-stack">
+          <div class="who"><h3>Hiring manager / product leader</h3><p>You need the decision: problem, constraint, options rejected, trade-off, outcome.</p></div>
+          <div class="who"><h3>Engineer / technical peer</h3><p>You need architecture, evaluation design, and what broke, not business headlines.</p></div>
+        </div>
+        <div class="who"><h3>Portfolio</h3><p>Three flagship case studies. Each one states what the product is, who it is for, how it was built, and what changed. Technical detail sits underneath for those who want it. <a href="#work" data-go="work">Open Portfolio</a></p></div>
       </div>
-      <div class="arrow" aria-hidden="true">→</div>
-      <div class="route-stack">
-        <div class="who"><h3>→ Portfolio</h3><p>Three flagship case studies. Each one states what the product is, who it is for, how it was built, and what changed. Technical detail sits underneath for those who want it. <a href="#work" data-go="work">Open Portfolio</a></p></div>
-        <div class="who"><h3>Recruiter / HR screener → For Recruiters</h3><p>Title, dates, location, sponsorship, timeline, recommendations. Plain English, one page, no jargon. <a href="#recruiters" data-go="recruiters">Open For Recruiters</a></p></div>
+      <div class="route-pair">
+        <div class="who"><h3>Recruiter / HR screener</h3><p>You need the facts checked quickly: title, dates, location, and sponsorship, in plain English.</p></div>
+        <div class="who"><h3>For Recruiters</h3><p>Title, dates, location, sponsorship, timeline, recommendations. Plain English, one page, no jargon. <a href="#recruiters" data-go="recruiters">Open For Recruiters</a></p></div>
       </div>
-    </div>
-    <div class="route" style="margin-top:14px">
-      <div class="who"><h3>Founder / collaborator, or just curious</h3><p>Side projects, the longer story, and life outside work: soccer, flying, film.</p></div>
-      <div class="arrow" aria-hidden="true">→</div>
-      <div class="who"><h3>→ Beyond + Contact</h3><p>How I got here, soccer, flying, film, and community work. <a href="#beyond" data-go="beyond">Open Beyond</a></p></div>
+      <div class="route-pair">
+        <div class="who"><h3>Founder / collaborator, or just curious</h3><p>Side projects, the longer story, and life outside work: soccer, flying, film.</p></div>
+        <div class="who"><h3>Beyond + Contact</h3><p>How I got here, soccer, flying, film, and community work. <a href="#beyond" data-go="beyond">Open Beyond</a></p></div>
+      </div>
     </div>
   </section>
 
